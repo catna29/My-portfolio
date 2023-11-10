@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant+Garamond:wght@300&family=Inconsolata:wght@700&family=Lilita+One&family=Pacifico&family=Preahvihear&family=Roboto+Slab&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant+Garamond:wght@300&family=Inconsolata:wght@700&family=Inter:wght@100;400;500;600&family=Lilita+One&family=Pacifico&family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant+Garamond:wght@300&family=Inconsolata:wght@700&family=Inter:wght@100;400;500;600&family=Lilita+One&family=Pacifico&family=Preahvihear&family=Rubik:wght@300&display=swap');
+
+
+/***** set body *************************************************/
+h1,h2,h3,h4,h5{
+    font-family: Agbalumo;
+}
+
+*{
+    left: 0;
+    top: 0;
+    font-family: Rubik;
+    font-size: 16px;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --main-color: #6E68BD;
+    --second-color: #FFABC3;
+    --third-color: #FCF6BD;
+    --background-color: white;
+    --font1--color: black;
+    --font2--color: rgb(67, 62, 147);
+}
+
+body{
+    background-image: url(picture/bg-body.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: inherit;
+}
+
+/***** home *************************************************/
+
+section.home{
+    position: relative;
+    margin: 40px;
+    
+
+}
+
+section.home::before{
+    content: "";
+    width: 100%;
+    height: 100%; /*height 100 %*/
+    position: absolute;
+    background: var(--background-color);
+    z-index: -1;
+    opacity: .5;
+    border-radius: 20px;
+}
+
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0px 10px ;
+
+}
+
+nav img{
+    width: 250px;
+
+}
+
+nav .container:nth-child(2){
+    max-width: 300px;
+    display: flex;
+    justify-content: space-around;
+    text-align: end;
+    flex-wrap: nowrap;
+    border-radius: 30px;
+    box-shadow: 
+    inset 0 -3em 3em rgba(0, 200, 0, 0.3),
+    0 0 0 2px white, /*border*/
+    0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+    padding: 5px;
+    margin-left: 35px;
+    margin: 20px 0px 20px 70px;
+}
+
+
+nav .container .menuBar_item{
+    padding:10px;
+    border-radius: 30px;
+    color: var(--font2--color);
+}
+
+nav .container .menuBar_item a{
+    text-decoration: none;
+    
+}
+
+nav .container .menuBar_item:first-child{
+    background: var(--background-color);
+}
+
+nav .container .menuBar_item:hover{
+    padding:12px 10px 0px 10px;
+    color: var(--font2--color);
+    background: var(--background-color);
+}
+
+nav .container:last-child{
+    padding: 20px;
+}
+
+nav .container > button{
+    background: none;
+    border: 3px double var(--main-color);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 20px;
+}
+
+nav .container > button:hover{
+    background: var(--background-color);
+    box-shadow: 
+    0 0 0 2px white, /*border*/
+    0.3em 0.3em 1em var(--main-color);;
+    
+}
+
+nav .container:last-child{
+    text-align: end;
+}
+
+/*header*/
+header{
+    display: grid;
+    padding: 70px 50px;
+    max-width: 100%;
+    height: 80vh; /*height locate height header = 80% always*/
+    grid-template-columns: (repeat, 1fr); /*1fr * 2 */
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "t p";
+    align-items: center;
+    text-align: center;
+    
+}
+
+#text { grid-area: t;}
+#picture { grid-area: p;}
+
+#text h2 span{
+    font-family: Agbalumo;
+    color: var(--main-color);
+    font-size: 40px;
+}
+#text h2 .pink{
+    color: var(--second-color);
+}
+
+#picture img{
+    max-width: 250px;
+    border-radius: 30px;
+    box-shadow:
+    inset 0 -3em 3em rgba(57, 155, 12, 0.3),
+    0 0 0 2px white, /*border*/
+    0.3em 0.3em 1em rgba(67, 34, 117, 0.6);
+}
+
+/***** My work *************************************************/
+
+main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+main .container:first-child{
+    border-radius: 20px;
+    color: black;
+    padding: 20px;
+    box-shadow:
+    inset 0 -3em 3em  var(--third-color),
+    0 0 0 2px rgb(254, 255, 255), /*border*/
+    0.3em 0.3em 1em rgba(67, 34, 117, 0.6);
+    
+}
+
+
+main .container:nth-child(2){
+    color:  var(--main-color);
+}
+
+main .container:nth-child(4){
+    color:  var(--main-color);
+}
+
+
+main > .frontEnd, .graphic{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+main .container > div{
+    position: relative;
+    padding: 100px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow:  
+    0 0 0 2px white, /*border*/
+    0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+}
+
+main .container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*border have to put for same as frontEnd > div border */
+    border-radius: 10px;
+    opacity: .4;
+    /*I have to put it because if not put it will black*/
+    -webkit-backdrop-filter: blur(20px);
+}
+
+main .container img:hover{
+    opacity: .1;
+}
+
+main .container h5{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0;
+}
+
+/***** About *************************************************/
+
+
+
+/***** Footer *************************************************/
+
+
+
+
+
+/***** Media screen laptop *****************************************/
+
+@media screen and (max-width: 992px) {
+    *{
+        font-size: 13px;
+    }
+
+    nav .container:nth-child(2){
+        margin-left: 35px;
+        color: var(--font2--color);
+    }
+
+    nav img{
+        width: 200px;
+    }
+ 
+
+    header{
+        height: 80vh;
+    }
+
+    main > .frontEnd, .graphic{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }  
+
+    
+   
+}
+
+
+/***** Media screen Phone *****************************************/
+
+@media screen and (max-width: 769px) {
+
+    nav .container:nth-child(2){
+        display: none;
+    }  
+
+    #text h2 span{
+        font-size: 24px;
+    }
+
+    header{
+        height: 75vh;
+    }
+
+    main > .frontEnd, .graphic{
+        display: grid;
+        grid-template-columns: 1fr;
+    }      
+
+    main .container > div{
+        padding: 150px;
+    }
+
+    
+}
