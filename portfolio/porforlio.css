@@ -4,7 +4,7 @@
 
 
 /***** set body *************************************************/
-h1,h2,h3,h4,h5{
+h1,h2{
     font-family: Agbalumo;
 }
 
@@ -27,32 +27,15 @@ h1,h2,h3,h4,h5{
 }
 
 body{
-    background-image: url(picture/bg-body.png);
+    /* background-image: url(picture/bg-body.png);
     background-size: cover;
     background-position: center;
     background-repeat: inherit;
+    */
+   
 }
 
 /***** home *************************************************/
-
-section.home{
-    position: relative;
-    margin: 40px;
-    
-
-}
-
-section.home::before{
-    content: "";
-    width: 100%;
-    height: 100%; /*height 100 %*/
-    position: absolute;
-    background: var(--background-color);
-    z-index: -1;
-    opacity: .5;
-    border-radius: 20px;
-}
-
 
 nav{
     width: 100%;
@@ -77,9 +60,9 @@ nav .container:nth-child(2){
     flex-wrap: nowrap;
     border-radius: 30px;
     box-shadow: 
-    inset 0 -3em 3em rgba(0, 200, 0, 0.3),
+    inset 0 -3em 3em var(--second-color),
     0 0 0 2px white, /*border*/
-    0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+    0.3em 0.3em 1em var(--main-color);
     padding: 5px;
     margin-left: 35px;
     margin: 20px 0px 20px 70px;
@@ -94,6 +77,7 @@ nav .container .menuBar_item{
 
 nav .container .menuBar_item a{
     text-decoration: none;
+    color:  rgb(80, 77, 77);
     
 }
 
@@ -103,7 +87,7 @@ nav .container .menuBar_item:first-child{
 
 nav .container .menuBar_item:hover{
     padding:12px 10px 0px 10px;
-    color: var(--font2--color);
+    color: rgb(80, 77, 77);
     background: var(--background-color);
 }
 
@@ -117,6 +101,7 @@ nav .container > button{
     border-radius: 6px;
     padding: 8px 12px;
     font-size: 20px;
+    font-family: Agbalumo;
 }
 
 nav .container > button:hover{
@@ -134,7 +119,7 @@ nav .container:last-child{
 /*header*/
 header{
     display: grid;
-    padding: 70px 50px;
+    padding: 100px 60px;
     max-width: 100%;
     height: 80vh; /*height locate height header = 80% always*/
     grid-template-columns: (repeat, 1fr); /*1fr * 2 */
@@ -142,6 +127,7 @@ header{
     grid-template-areas: "t p";
     align-items: center;
     text-align: center;
+    gap: 20px;
     
 }
 
@@ -153,8 +139,37 @@ header{
     color: var(--main-color);
     font-size: 40px;
 }
+
 #text h2 .pink{
     color: var(--second-color);
+}
+
+
+#text ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+#text ul li{
+    text-decoration: none;
+    list-style: none;
+    padding: 10px 14px;
+    border-radius: 70px;
+    background: rgb(188, 183, 183);
+}
+
+
+#text ul li:hover{
+    background: rgb(255, 255, 255);
+}
+
+#text ul li i{
+    font-size: 18px;
+    color: rgb(54, 54, 53);
 }
 
 #picture img{
@@ -162,40 +177,46 @@ header{
     border-radius: 30px;
     box-shadow:
     inset 0 -3em 3em rgba(57, 155, 12, 0.3),
-    0 0 0 2px white, /*border*/
-    0.3em 0.3em 1em rgba(67, 34, 117, 0.6);
+    0 0 0 2px white,
+    0.3em 0.3em 1em var(--second-color);
+    
 }
 
 /***** My work *************************************************/
+#Mywork{
+    background: rgb(250, 193, 202);
+}
 
 main{
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     padding-top: 30px;
     align-items: center;
     text-align: center;
 }
 
-main .container:first-child{
+
+main .container h2{
     border-radius: 20px;
-    color: black;
-    padding: 20px;
+    color: rgb(253, 250, 250);
+    padding: 20px 0px;
+    margin: 20px 9rem;
     box-shadow:
-    inset 0 -3em 3em  var(--third-color),
     0 0 0 2px rgb(254, 255, 255), /*border*/
     0.3em 0.3em 1em rgba(67, 34, 117, 0.6);
-    
+
 }
 
 
 main .container:nth-child(2){
-    color:  var(--main-color);
+    color:  grey;
+    padding-top: 30px;
 }
 
 main .container:nth-child(4){
-    color:  var(--main-color);
+    color:  grey;;
 }
 
 
@@ -208,11 +229,11 @@ main > .frontEnd, .graphic{
 main .container > div{
     position: relative;
     padding: 100px;
-    margin: 20px;
+    margin: 30px 20px;
     border-radius: 10px;
     box-shadow:  
     0 0 0 2px white, /*border*/
-    0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+    0.3em 0.3em 2em rgba(24, 20, 32, 0.6);
 }
 
 main .container img{
@@ -223,24 +244,110 @@ main .container img{
     left: 0;
     /*border have to put for same as frontEnd > div border */
     border-radius: 10px;
-    opacity: .4;
+    opacity: .1;
     /*I have to put it because if not put it will black*/
     -webkit-backdrop-filter: blur(20px);
 }
 
 main .container img:hover{
-    opacity: .1;
+    opacity: .8;
+   
 }
 
-main .container h5{
+main .container a{
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 50%;
+    top: 40%;
     left: 0;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: rgb(150, 148, 148);
+    font-family: Agbalumo;
+    padding: 0px 10px;
 }
 
 /***** About *************************************************/
+#About{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*1fr * 2 */
+    grid-template-rows: auto auto  auto;
+    grid-template-areas: "a a a" "p p s" " c c c ";
+    justify-content: space-around;
+    padding: 100px;
+
+    
+}
+
+.about { grid-area: a;}
+.picture { grid-area: p;}
+.skill  { grid-area: s;}
+.certificate { grid-area: c;}
+
+
+
+#About .container h2{
+    border-radius: 20px;
+    color: black;
+    padding: 20px 0px;
+    margin: 0px 9rem 70px 9rem;
+    box-shadow:
+    0 0 0 2px rgb(254, 255, 255), /*border*/
+    0.3em 0.3em 1em rgba(67, 34, 117, 0.6);
+    text-align: center;
+
+}
+
+.picture img {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.skills{
+    text-align: center;
+}
+
+
+.skills h3{
+    font-size: 35px;
+    padding-bottom: 10px ;
+    color:var(--main-color);
+    font-weight: 500;
+}
+.firstSkills{
+    padding-top: 70px ;
+}
+
+.skills .container{
+    padding-bottom: 25px ;
+}
+
+.certificate h3{
+    padding: 80px 0px 50px 0px;
+    font-size: 40px;
+    color: var(--main-color);
+    text-align: center;
+    font-weight: 500;
+    
+}
+
+.certificate img{
+    max-width: 200px;
+} 
+
+.certificate .container{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 20px;
+
+    
+}
+
+
+
+
+
 
 
 
@@ -253,6 +360,7 @@ main .container h5{
 /***** Media screen laptop *****************************************/
 
 @media screen and (max-width: 992px) {
+
     *{
         font-size: 13px;
     }
@@ -274,16 +382,27 @@ main .container h5{
     main > .frontEnd, .graphic{
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }  
+    } 
 
-    
-   
+    #picture img{
+        max-width: 220px;   
+    }
+
+    .picture img {
+        max-width: 450px;
+    }
+
+    .certificate img{
+        max-width: 170px;
+    } 
+
 }
-
-
 /***** Media screen Phone *****************************************/
 
 @media screen and (max-width: 769px) {
+    h3 {
+        font-size: 15px;
+    }
 
     nav .container:nth-child(2){
         display: none;
@@ -305,6 +424,34 @@ main .container h5{
     main .container > div{
         padding: 150px;
     }
+
+    #About{
+        grid-template-columns: 1fr;
+        grid-template-areas: "a a a" "p p p" "s s s"" c c c ";
+       
+        
+    }
+
+    .skills{
+       display: flex;
+       flex-direction: row;
+      
+    }
+
+    .skills h3{
+        font-size: 29px;
+    }
+
+    .secondSkills{
+        padding-top: 70px ;
+    }
+    
+    
+
+    .certificate .container{
+        grid-template-columns: 1fr;
+    
+    } 
 
     
 }
