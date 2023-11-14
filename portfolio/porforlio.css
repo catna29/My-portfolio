@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant+Garamond:wght@300&family=Inconsolata:wght@700&family=Lilita+One&family=Pacifico&family=Preahvihear&family=Roboto+Slab&family=Young+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant+Garamond:wght@300&family=Inconsolata:wght@700&family=Inter:wght@100;400;500;600&family=Lilita+One&family=Pacifico&family=Preahvihear&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant+Garamond:wght@300&family=Inconsolata:wght@700&family=Inter:wght@100;400;500;600&family=Lilita+One&family=Pacifico&family=Preahvihear&family=Rubik:wght@300&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant+Garamond:wght@300&family=Inconsolata:wght@700&family=Inter:wght@100;400;500;600&family=Lilita+One&family=Pacifico&family=Pixelify+Sans&family=Preahvihear&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Concert+One&family=Cormorant+Garamond:wght@300&family=Inconsolata:wght@700&family=Inter:wght@100;400;500;600&family=Lilita+One&family=Pacifico&family=Pixelify+Sans&family=Preahvihear&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Concert+One&family=Cormorant+Garamond:wght@300&family=Fugaz+One&family=Inconsolata:wght@700&family=Inter:wght@100;400;500;600&family=Lilita+One&family=Pacifico&family=Pixelify+Sans&family=Preahvihear&family=Rubik:wght@300&display=swap');
 /***** set body *************************************************/
 h1,h2{
     font-family: Agbalumo;
@@ -19,8 +20,8 @@ h1,h2{
 
 :root{
     --main-color: #6E68BD;
-    --second-color: #FFABC3;
-    --third-color: #FCF6BD;
+    --second-color: #fbd7e1;
+    --third-color: papayawhip;
     --background-color: white;
     --font1--color: black;
     --font2--color: rgb(67, 62, 147);
@@ -164,7 +165,7 @@ header{
 
 
 #text ul li:hover{
-    background: rgb(255, 255, 255);
+    background: rgb(203, 201, 201);
 }
 
 #text ul li i{
@@ -183,88 +184,64 @@ header{
 }
 
 /***** My work *************************************************/
-#Mywork{
-    background: rgb(250, 193, 202);
-}
 
-main{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    gap: 30px;
-    padding-top: 30px;
-    align-items: center;
+
+.testimonial-grid{
+    margin: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
     text-align: center;
 }
-
-
-main .container h2{
-    border-radius: 20px;
-    color: rgb(253, 250, 250);
-    padding: 20px 0px;
-    margin: 20px 9rem;
+.testimonial-grid .text:not(:nth-child(16)){
     box-shadow:
-    0 0 0 2px rgb(254, 255, 255), /*border*/
-    0.3em 0.3em 1em rgba(67, 34, 117, 0.6);
+    0 0 0 2px white,
+    0.1em 0.3em .5em rgb(244, 213, 213);
 
+}
+.testimonial:first-child{
+    background: rgb(215, 250, 229); 
+}
+
+.testimonial-grid .gh{
+    background: rgb(215, 250, 229); 
+}
+
+.grid-col-span-2{
+    grid-column: span 2;
 }
 
 
-main .container:nth-child(2){
-    color:  grey;
-    padding-top: 30px;
-}
-
-main .container:nth-child(4){
-    color:  grey;;
-}
-
-
-main > .frontEnd, .graphic{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-}
-
-main .container > div{
+article {
     position: relative;
-    padding: 100px;
-    margin: 30px 20px;
-    border-radius: 10px;
-    box-shadow:  
-    0 0 0 2px white, /*border*/
-    0.3em 0.3em 2em rgba(24, 20, 32, 0.6);
 }
 
-main .container img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    /*border have to put for same as frontEnd > div border */
-    border-radius: 10px;
-    opacity: .1;
-    /*I have to put it because if not put it will black*/
-    -webkit-backdrop-filter: blur(20px);
-}
-
-main .container img:hover{
-    opacity: .8;
-   
-}
-
-main .container a{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+article a,
+article h3{
+    position: relative;
     top: 40%;
-    left: 0;
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: rgb(150, 148, 148);
-    font-family: Agbalumo;
-    padding: 0px 10px;
+}
+
+article h3{
+    font-size: 2rem;
+    font-family: Pixelify Sans;
+}
+
+article a{
+    font-family: Fugaz One;
+    text-decoration-line: none;
+    color: rgb(102, 100, 100);
+}
+
+article a:hover{
+    color: rgb(37, 36, 36);
+}
+
+article img{
+    max-width: 300px;
+    box-shadow:
+    0 0 0 2px white,
+    0.1em 0.3em .5em rgb(145, 144, 144);
 }
 
 /***** About *************************************************/
@@ -373,16 +350,26 @@ main .container a{
     nav img{
         width: 200px;
     }
- 
 
     header{
         height: 80vh;
     }
 
-    main > .frontEnd, .graphic{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    } 
+    .testimonial-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .testimonial:first-child{
+       padding: 50px; 
+    }
+
+    .testimonial:nth-child(16){
+        padding: 50px;
+    }
+
+    article h3{
+        top: 10%;
+    }
+
 
     #picture img{
         max-width: 220px;   
@@ -416,20 +403,20 @@ main .container a{
         height: 75vh;
     }
 
-    main > .frontEnd, .graphic{
-        display: grid;
-        grid-template-columns: 1fr;
-    }      
+    .testimonial-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-    main .container > div{
-        padding: 150px;
+
+
+    article h3{
+        padding: 1rem 1rem;
+
     }
 
     #About{
         grid-template-columns: 1fr;
         grid-template-areas: "a a a" "p p p" "s s s"" c c c ";
-       
-        
     }
 
     .skills{
