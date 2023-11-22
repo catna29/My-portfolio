@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Concert+One&family=Cormorant+Garamond:wght@300&family=Fugaz+One&family=Inconsolata:wght@700&family=Inter:wght@100;400;500;600&family=Lilita+One&family=Pacifico&family=Pixelify+Sans&family=Poppins:wght@100&family=Preahvihear&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Concert+One&family=Cormorant+Garamond:wght@300&family=Fugaz+One&family=Inconsolata:wght@700&family=Inter:wght@100;400;500;600&family=Lilita+One&family=Pacifico&family=Pixelify+Sans&family=Poppins:wght@100&family=Preahvihear&family=Rubik:wght@300&display=swap');
+
+
+:root{
+    --main-color: linear-gradient(147deg,rgba(87, 234, 178, 0.383), rgba(46, 149, 189, 0.383) 10%, #0e14d7 60%);
+    --second-color: #fbf6f8;
+    --button-color: linear-gradient(147deg, #FFE53B 0%, #fd7d38 94%);
+}
+
+*{
+    left: 0;
+    top: 0;
+    font-family: Rubik;
+    box-sizing: border-box;
+    color: var(--second-color);
+}
+
+button{
+    color: var(--second-color);
+    background: var(--button-color);
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( rgb(0, 0, 50,0.5), rgb(0, 0, 50,0.5)),url(bg_singup.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+   
+}
+
+.container{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form{
+    background: rgba(255, 255, 255, 0.496);
+    padding: 2rem 2.8rem;
+    box-shadow:
+    0 0 0 3px rgb(12, 2, 61),
+    0em 0em 2em rgb(249, 247, 247);
+    border-radius: 2px;
+    margin: 100px 0px;
+}
+
+form  {
+    display: block;
+}
+
+
+
+input[type=text],
+input[type=email]{
+    width: 100%;
+    padding: 10px 1px;
+    display: inline-block;
+    background: rgb(99, 94, 124);
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+input[type=password]{
+    color: black;
+    padding: 6px;
+  }
+
+form div:last-child{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+button{
+    margin-top: 5px;
+    padding: 8px 6px;
+}
+
+form div:first-child{
+    padding-top:  5px;
+    padding-bottom: 5px;
+}
+
+form div:not(:nth-child(7)){
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 7px;
+}
+
+form div:not(:nth-child(1)){
+    font-size: 10px;
+    
+}
+
+.form-control{
+    position: relative;
+    border: none;
+    background: none;
+   
+}
+.form-control small{
+    visibility: hidden;
+}
+
+.form-control i{
+    position: absolute;
+    top: 30%;
+    left: 85%;
+    visibility: hidden;
+}
+
+
+
+.form-control.success input{
+    border-color: #23d94b;
+}
+
+.form-control.success i.fa-check{
+    visibility: visible;
+    padding: 5px;
+    background: rgb(4, 100, 4);
+    color: rgb(162, 227, 162);
+    border-radius: 8px;
+   
+}
+
+.form-control.error small{
+    color: #f64730;
+    visibility: visible;
+}
+
+.form-control.error input{
+    border-color: #f64730;
+}
+
+.form-control.error i.fa-xmark{
+    visibility: visible;
+    padding: 5px;
+    background: #f64730;
+    color: rgb(245, 184, 167);
+    border-radius: 8px;
+   
+}
+
+
+@media screen and (max-width: 769px) {
+
+    .container form{
+        margin: 3rem 3rem ;
+        padding: 1rem 1rem;
+    }
+
+    form h2{
+        font-size: 20px;
+    }
+
+    form div:not(:nth-child(1)){
+        font-size: 9px;
+    }
+
+    
+    
+    
+}
+
+
+
+
+
+
+
+

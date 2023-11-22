@@ -1,0 +1,445 @@
+
+*{
+    left: 0;
+    top: 0;
+    font-family: Rubik;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: rgba(142, 134, 134, 0.757);
+    --second-color: #fbf6f8;
+    --button-color: linear-gradient(147deg, #f9f8f3 0%, rgba(142, 134, 134, 0.757) 94%);
+
+    --third-color: papayawhip;
+    --background-color: white;
+    --font1--color: black;
+    --font2--color: rgb(67, 62, 147);
+}
+
+body{
+    top: 0;
+    left: 0;
+    color: white;
+
+}
+
+section{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(picture/Home_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    transition: 0.5s;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease ;
+    -ms-transform: all 0.25s ease ;
+    -o-transition: all 0.25s ease ;
+}
+
+
+
+section .home {
+    padding: 40px 40px;
+}
+
+section .home .logo img{
+    width: 80px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    position: sticky;
+    border-radius: 15px;
+    padding: 40px;
+    
+}
+
+nav img{
+    max-width: 80px;
+}
+
+nav a{
+    font-family: Poppins;
+    text-decoration: none;
+    color: var(--second-color);
+    padding: 0px 15px;
+   
+}
+nav a i{
+    font-size: 1.5rem;
+}
+
+nav a:hover{
+    color: rgb(237, 179, 239);
+   
+}
+
+nav .shopping{
+    position: relative;
+    width: 100%;
+    
+}
+.shopping a{
+    position: absolute;
+   
+}
+.shopping span{
+    position: absolute;
+    top: -25px;
+    left: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgb(222, 48, 48); 
+    padding: 2px  10px;
+    border-radius: 40px;
+}
+
+
+nav .logo1{
+    display: none;
+} 
+
+nav .icon{
+    display: none;
+}   
+
+nav .close{
+    display: none;
+}
+
+button {
+    background: black;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+button a{
+    display:block; 
+    color: rgb(249, 239, 239);
+}
+
+nav .card{
+    display: none;
+}
+
+/*start header */
+
+.header { grid-area: h;}
+.second_header { grid-area: s;}
+.product  { grid-area: p;}
+
+
+
+.home .product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ; /*1fr * 2 */
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "h h s" "h h s" " p p p ";
+    justify-content: space-around;
+    width: 100%;
+    height: 80vh;
+    padding: 80px 50px 70px 50px ;
+    gap: 10px;
+    
+}
+
+.header h1{
+    font-size: 50px;
+
+}
+
+
+
+
+.second_header {
+    padding: 0px 20px;
+}
+
+/*start card */
+.product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    
+  }
+
+  .product .columns{
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    
+  }
+
+  .product .columns::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(200, 200, 200, 0.7);   
+    border-radius:10px ;
+    opacity: .3;
+    z-index: -1;
+
+  }
+
+  .product .columns span{
+    font-size: 20px;
+    
+  }
+  
+  
+  
+.price {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    
+}
+
+.price .header {
+    color: white;
+    font-size: 15px;
+}
+
+.price li:not(:nth-child(4)) {
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+.price li:nth-child(2){
+    color: rgb(222, 48, 48);   
+}
+  
+.price .grey {
+    background-color: #eee;
+    font-size: 12px;
+    color: black;
+}
+
+  
+.button {
+    border: .5px solid white; 
+    margin-top: 20px;
+    padding: 5px 0px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 15px;
+    background: black;
+}
+
+.button a{
+    text-decoration: none; 
+    color: white;
+}
+
+.button a:hover{
+    text-decoration: none; 
+    color: rgb(222, 48, 48);   
+}
+  
+@media only screen and (max-width: 992px) {
+
+    .home .product_container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "h h h" "s p p" "s p p";
+        padding: 70px 40px 300px 40px ;
+        grid-template-rows: 2fr 1fr;
+        gap: 30px;
+    }
+
+    .shopping span{
+        top: 20px;
+        left: 52px;
+        
+    }
+    
+    
+
+    .product {
+        gap: 15px;  
+      }
+
+    .header h1{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .header h3{
+        font-size: 25px;
+        text-align: center;
+    }
+
+
+    .second_header {
+        padding: 20px 0px;
+    }
+
+    .second_header h4 {
+        font-size: 18px;
+        
+    }
+
+    .product .columns span{
+        font-size: 14px;    
+      }
+    
+      .product .columns p{
+        font-size: 10px;    
+      }
+      
+      
+      .product {
+        margin-top: 30px;
+        
+      }
+
+
+    .topnav a:nth-child(2) {
+        display: none;
+    }
+
+    .topnav a:nth-child(3) {
+        display: none;
+    }
+
+    .topnav a:nth-child(4) {
+        display: contents;
+    }
+
+    .topnav {
+        display: contents;
+    
+    }
+
+    .topnav button {display: none;}
+
+    .logo {display: none;}
+
+    .topnav .icon {
+        display: contents;}
+
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
+     This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    .topnav.responsive {
+        position: absolute;
+        display: block;
+        width: 100%;
+        padding: 40px;
+        background-color: rgba(0, 0, 0, 0.513);
+
+    }
+    .topnav.responsive .shopping span{
+        top: -15px;
+        left: 30px;
+    }
+
+    .topnav.responsive .icon{
+        display: none;
+    }
+   
+    .topnav.responsive .logo1 {
+        display: flex;
+        text-align: left;
+    }
+
+    .topnav.responsive img {
+        width: 60px;
+        padding: 20px 0px;
+    }
+
+    .topnav.responsive .close{
+        position: absolute;
+        float:right;
+        top: 0%;
+        width: 100%;
+        display: inline-block;
+        align-items: end;
+        padding: 40px;
+    }
+
+    .topnav.responsive .close i{
+        font-size: 30px;
+    }
+
+    .topnav.responsive button{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+
+    }
+
+
+     .topnav.responsive a:not(:last-child){
+       display: flex;
+       flex-direction: column;
+       text-align: left;
+       margin-bottom: 20px ;
+    
+     }
+
+     
+
+
+     
+
+
+}
+
+@media only screen and (max-width: 769px) {
+    
+    .product .columns span{
+        font-size: 15px;    
+      }
+
+      .home .product_container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "h h h" "s p p" "s p p";
+        padding: 80px 30px 500px 30px ;
+        grid-template-rows: 1fr;
+        gap: 40px;
+    }
+
+    .product {
+        gap: 5px;  
+      }
+
+      .product .columns span{
+        font-size: 12px;    
+      }
+    
+      .product .columns p{
+        font-size: 9px;    
+      }
+
+      .product .columns{
+        padding: 15px;
+        
+      }
+      
+      
+
+
+}

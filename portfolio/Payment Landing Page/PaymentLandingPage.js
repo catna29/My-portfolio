@@ -5,7 +5,6 @@ function myFunction() {
 
     if (x.className === "topnav"){
         x.className += " responsive";
-        y
 
     } else {
       x.className = "topnav";
